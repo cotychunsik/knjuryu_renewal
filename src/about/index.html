@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사소개</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <a href="../../index.html">
+            <div class="logo-area">
+                <img src="../../img/knlogo.svg" alt="강남양행" srcset="">
+                <h1 class="logo">강남양행</h1>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="/renew/">Home</a></li>
+            <li class="active"><a href="#"></a>회사소개</li>
+            <li><a href="../catalog/#">주류안내</a></li>
+            <li><a href="#" onclick="alert('준비중입니다');return true;">도매몰</a></li>
+            <li class="ctn"><a href="#"></a>문의하기</li>
+        </ul>
+        <div class="menu-btn">
+            <img src="../../img/menu_black_36dp.svg">
+        </div>
+
+    </nav>
+   
+    <section class="events">
+        <div class="title">
+            <h1>회사소개</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src='./img/events/sample1.jpg'>
+                <h4>샘플타이틀</h4>
+                <p>Lorem</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <h4>샘플타이틀</h4>
+                <p>Lorem</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <footer>
+        <div class="logo-area bottom">
+            <img src="../../img/knlogo.svg" alt="강남양행" srcset="">
+            <h1 class="logo">강남양행</h1>
+        </div>
+        <div class="company-detail">
+            <address>주소: 서울시 서초구 탑성말길 17</address>
+            <p>사업자등록번호: 000 - 00 - 00000</p>
+            <p>주류문의: 02-572-2500</p>
+        </div>
+
+
+    </footer>
+
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+
+    </script>
+</body>
+
+</html>

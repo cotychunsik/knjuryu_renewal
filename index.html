@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강남양행 홈페이지 리뉴얼</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <a href="#">
+        <div class="logo-area">
+            <img src="./img/knlogo.svg" alt="강남양행" srcset="">
+            <h1 class="logo">강남양행</h1>
+        </div>
+        </a>
+
+        <ul class="nav-links">
+            <li class="active"><a href="#"></a>Home</li>
+            <li><a href="./src/about/#">회사소개</a></li>
+            <li><a href="./src/catalog/#">주류안내</a></li>
+            <li><a href="#" onclick="alert('준비중입니다');return true;">도매몰</a></li>
+            <li class="ctn"><a href="#"></a>문의하기</li>
+        </ul>
+        <div class="menu-btn">
+            <img src="./img/menu_white_36dp.svg">
+        </div>
+        
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>고객과 함께하는 주류유통</h2>
+            <div class="line"></div>
+            <h1>강남양행</h1>
+            <a href="./src/about/#" class="ctn">회사소개 더보기</a>
+        </div>
+    </header>
+
+    <!-- Events  -->
+    <section class="events">
+        <div class="title">
+            <h1>샘플제목</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src='./img/events/sample1.jpg'>
+                <h4>샘플타이틀</h4>
+                <p>Lorem</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src='./img/events/sample2.jpg'>
+                <h4>샘플타이틀</h4>
+                <p>Lorem</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-content">
+            <h1>샘플중간배너</h1>
+            <div class="line"></div>
+            <p>뭔가 설명을 더 넣고 싶거나 회사소개 주류안내 외 다른 페이지에 대한 구상이 있으면 여기</p>
+            <a href="" class="ctn">Learn More</a>
+        </div>
+    </section>
+    
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1>주류 안내 &<br> 상세정보</h1>
+                <div class="line"></div>
+                <p>Lorem</p>
+                <a href="" class="ctn">Learn More</a>
+            </div>
+            <div class="col img-col">
+                <div class="img-gallery">
+                    <img src="./img/events/sample1.jpg">
+                    <img src="./img/events/sample2.jpg" alt="" srcset="">
+                    <img src="./img/events/sample1.jpg" alt="" srcset="">
+                    <img src="./img/events/sample2.jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <div class="logo-area bottom">
+        <img src="./img/knlogo.svg" alt="강남양행" srcset="">
+        <h1 class="logo">강남양행</h1>
+    </div>
+    <div class="company-detail">
+        <address>주소: 서울시 서초구 탑성말길 17</address>
+        <p>사업자등록번호: 000 - 00 - 00000</p>
+        <p>주류문의: 02-572-2500</p>
+    </div>
+        
+       
+    </footer>       
+        
+
+<script type="text/javascript">        
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', ()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+
+    </script>
+</body>
+</html>
