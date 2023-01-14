@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="주류유통, 주류도매, 서울주류도매, 식당주류, 소주도매, 와인도매, 맥주도매, 수도권주류도매, 강남양행, 강남주류" />
+    <meta name="description" content="서울 경기 수도권 어디든 배달가능! 오랜 전통을 가진 믿을 수 있는 회사 강남양행(강남주류유통)입니다" />
+    <title>문의하기</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <a href="/">
+            <div class="logo-area">
+                <img src="../../img/knlogo.svg" alt="강남양행" srcset="">
+                <h1 class="logo">강남양행</h1>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="http://knjuryu.co.kr">Home</a></li>
+            <li><a href="http://knjuryu.co.kr/src/about/">회사소개</a></li>
+            <li ><a href="http://knjuryu.co.kr/src/catalog/"></a>주류안내</li>
+            <li><a href="#" onclick="alert('준비중입니다');return true;">도매몰</a></li>
+            <li class="active"><a href="http://knjuryu.co.kr/src/inquiry/"></a>문의하기</li>
+        </ul>
+        <div class="menu-btn">
+            <img src="../../img/menu_black_36dp.svg">
+        </div>
+
+    </nav>
+    <!-- Events  -->
+    <section class="inquiry">
+        <div class="title">
+            <h1>문의하기</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- blank -->
+            </div>
+                <div class="col contact">
+                        <h4>문의전화</h4>
+                        <p>02-572-2500</p>
+                        <h4>이메일문의</h4>
+                        <p>info@knjuryu.co.kr</p>
+                        
+                </div>
+                <div class="col">
+                    <h4>이메일 문의</h4>
+                    <p>연락받으실 이메일/전화번호 중 하나는 반드시 남겨주세요</p>
+                    <form class="gform" method="post" data-email="info@knjuryu.co.kr"
+                    action="https://script.google.com/macros/s/AKfycbwW2L95sw5qKlFCGDtUxiC-7YtfhZUqdTVrDyRtRca7AkfOn3hz19gnHZglHcBtTZusUA/exec">
+                        <div class="form-line">
+                            <div class="form-name">
+                                <label for="name">이름<span style="color: red;">*</span></label>
+                            </div>
+                            
+                            <input id="name" name="name" type="text" required/>
+                        </div>
+                        <div class="form-line">
+                            <div class="form-name">
+                                <label for="email">이메일</label>
+                            </div>                            
+                            <input id="email" name="email" type="email"/>
+                        </div>
+                        <div class="form-line">
+                            <div class="form-name">
+                                <label for="phone">연락처</label>
+                            </div>                            
+                            <input id="phone" name="phone" type="tel"/>
+                        </div>
+                        <div class="form-line">
+                            <label for="inquiry" type="text">문의내용</label>            
+                        </div>
+                        <textarea id="inquiry" name="inquiry" rows="10" placeholder="내용을 입력하세요"></textarea>     
+                        <div class="form-line">
+                        <a href="#" class="submit-button">
+                        <input type="submit" value="문의전송하기" id="submitBtn"/>
+                    </a>
+                        </div>
+                    <div style="display:none" class="thankyou_message">
+                        <p>문의전송완료</p>
+                    </div>
+                    </form>
+                    
+
+
+                </div>
+            <div class="col">
+                <!-- blank -->
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <div class="logo-area bottom">
+            <img src="../../img/knlogo.svg" alt="강남양행" srcset="">
+            <h1 class="logo">강남양행</h1>
+        </div>
+        <div class="company-detail">
+            <address>주소: 서울시 서초구 탑성말길 17</address>
+            <p>사업자등록번호: 210 - 81 - 18407</p>
+            <p>전화번호: 02-572-2500 | Fax: 02-3391-2675</p>
+        </div>
+        <div class="company-detail">
+            <h1>거래문의</h1>
+            <a href="mailto:info@knjuryu.co.kr?subject=주류도매문의">
+                <p>info@knjuryu.co.kr</p>
+            </a>
+            <p>02-572-2500</p>
+        </div>
+    
+    
+    </footer>
+
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+
+    </script>
+    <script data-cfasync="false" type="text/javascript"
+        src="form-submission-handler.js"></script>
+
+</body>
+
+</html>

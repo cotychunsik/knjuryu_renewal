@@ -4,33 +4,43 @@
     font-style: normal;
     font-display: swap;
     src: local('Pretendard Variable'), url('/src/woff2/PretendardVariable.woff2') format('woff2-variations');
+    unicode-range: U+AC00-D7A3 U+0041-005A U+0061-007A;
 }
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Pretendard Variable';
+    font-family: 'Pretendard';
 }
 
 a {
     text-decoration: none;
     color: whitesmoke;
+        font-weight: 500;
 }
 
 a:visited{
     color: whitesmoke;
+
 }
 
 ul{
     list-style: none;
 }
 
+li{
+    background-color: #16558f;
+        padding: 8px 15px;
+        border-radius: 25px;
+
+}
 .active{
-    font-weight: bold;
+    font-weight: 700;
     padding: 8px 15px;
     background: whitesmoke;
     border-radius: 30px;
     color: #0583D2;
+
 }
 
 body, html{
@@ -38,6 +48,7 @@ body, html{
 }
 
 /*-NavBar-*/
+
 .navbar{
     position:fixed;
     top:0;
@@ -47,8 +58,7 @@ body, html{
     justify-content: space-between;
     padding: 20px;
     color: whitesmoke;
-    background: linear-gradient(0deg, transparent, #16558f);
-    z-index: 100;
+    /* background: linear-gradient(0deg, transparent, rgba(0,0,0,0.5)); */
 }
 .down{
     background-color: black;
@@ -77,13 +87,13 @@ body, html{
 header{
     width:100vw;
     height:100vh;
-    background-image: url('../img/bg.jpg');
+    background-image: url('http://kangnam1977.cdn1.cafe24.com/images/bgimg/bg.jpg');
     background-position: bottom;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    text-shadow: 0 0 20px rgba(0, 0, 84, 0.5);
 }
 .header-content{
     margin-bottom: 150px;
@@ -93,6 +103,7 @@ header{
 .header-content h2{
     font-size:4vmin;
 }
+
 .line{
     width:150px;
     height:4px;
@@ -117,6 +128,14 @@ header{
     top:30px;
     right:30px;
     width:40px;
+    cursor: pointer;
+    display: none;
+}
+.menu-btn2 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40px;
     cursor: pointer;
     display: none;
 }
@@ -195,13 +214,19 @@ p{
 .content-col{
     width:40%;
 }
+    .content-col h2{
+        color: #0583D2;
+    }
+    .content-col h3{
+        font-weight: 600;
+    }
 .img-col{
     width:60%;
 }
-.tours .row .col{
+.liquors .row .col{
     width:50%;
 }
-.tours .img-gallery{
+.liquors .img-gallery{
     display: flex;
     flex-wrap: wrap;
     width:100%;
@@ -230,10 +255,99 @@ p{
 
 }
 
-footer{
-    width:100%;
-    min-height:100px;
-    padding:20px 80px;
+/*-about-*/
+.about{
+        width: 100vw;
+            height: 40vh;
+            background-image: url('http://kangnam1977.cdn1.cafe24.com/images/bgimg/bg.jpg');
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items:flex-end;
+            justify-content: center;
+            text-shadow: 0 0 20px rgba(0, 0, 84, 0.5);
+}
+#about-img{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+
+/*-liquor-*/
+.round{
+
+    border-radius: 16px;
+    padding: 40px 100px;
+    background-color: black;
+    /* background-image: url('https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'); */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.round h4{
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.bk{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding:36px 78px;
+    margin-top: -24px;
+    border-radius: 50%;
+}
+
+        .liquor-info .row .col {
+            margin-top: 50px;
+        }
+/*-inquiry-*/
+.contact{
+    text-align: left;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.form-line{
+    display: flex;
+    justify-content: right;
+    padding: 5px;
+}
+
+.form-name{
+    font-weight: 500;
+    
+    width:50px;
+    align-items: center;
+}
+
+.form-line input{
+    height:30px;
+    align-items: center;
+}
+.submit-button{
+    background-color: #0583D2;
+    padding:8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+#submitBtn{
+        justify-content: center;
+            align-items: center;
+    background: none;
+    border: none;
+    font-size:1.2rem;
+    color: whitesmoke;
+    font-weight: 600;
+        cursor: pointer;
+}
+/*-footer-*/
+footer {
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
     background: #16558f;
     margin: 0;
     text-align: center;
@@ -241,15 +355,17 @@ footer{
     justify-content: center;
     align-items: center;
 }
-footer h1{
+
+footer h1 {
     font-size: 20px;
 }
 
-footer .logo-area{
-    width:10%;
+footer .logo-area {
+    width: 10%;
 }
-footer .company-detail{
-    width:30%;
+
+footer .company-detail {
+    width: 30%;
 }
 
 .company-detail address {
@@ -257,25 +373,40 @@ footer .company-detail{
     font-style: normal;
 }
 
-footer p{
+.company-detail {
     color: whitesmoke;
-    margin:0;
+    line-height: 1.5;
+}
+
+footer p {
+    color: whitesmoke;
+    margin: 0;
 
 }
 
+
+
 /*-Mobile device-*/
-@media only screen and (max-width:850px){
-    .navbar{
-        padding:0;
+@media only screen and (max-width:850px) {
+    .navbar {
+        padding: 0;
         position: absolute;
     }
-    .logo-area{
+
+    .logo-area {
         position: absolute;
-        top:30px;
-        left:30px;
+        top: 25px;
+        left: 30px;
 
     }
-    .nav-links{
+     .back {
+
+            left: 80px;
+    
+        }
+
+
+    .nav-links {
         flex-direction: column;
         width: 100%;
         height: 80vh;
@@ -284,91 +415,145 @@ footer p{
         margin-top: -100vh;
         transition: all 0.5s ease;
     }
-    .menu-btn{
+
+    .menu-btn {
         display: block;
     }
-    .mobile-menu{
-        margin-top:0;
+    .menu-btn2 {
+        display: block;
+    }
+
+
+    .mobile-menu {
+        margin-top: 0;
         border-radius: 0 0 35% 0;
     }
-    .nav-links li{
+
+    .nav-links li {
         margin: 30px auto;
 
     }
+
     /*-Events-*/
-    .row{
+    .row {
         flex-direction: column;
     }
-    .row .col{
+
+    .row .col {
         margin: 20px auto;
     }
-    .col img{
+
+    .col img {
         max-width: 90%;
     }
-    /*-explore-*/
-    .explore-content{
-        width: 100%;
-    }
-    
-    .tours .col{
-        width: 100%;
-    }
-        .content-col h1 {
 
-            text-align: center;
-        }
+    /*-explore-*/
+    .explore-content {
+        width: 100%;
+    }
+
+    .liquors .col {
+        width: 100%;
+    }
+
+    .content-col {
+        width:80%;
+        line-height: 1.5;
+    }
+    .content-col h1 {
+
+        text-align: center;
+    }
+
+
+    .content-col p{
+        word-break: keep-all;
+    }
+
     .img-gallery {
         justify-content: center;
         align-items: center;
     }
-    .img-gallery img{
+
+    .img-gallery img {
         width: 90%;
     }
-    footer{
-        padding:10px;
+
+    /*-liquor-*/
+    .bk{
+        padding: 50px 84px;
+    }
+
+        .liquor-info .row {
+            flex-direction: column;
+        }
+    
+        .liquor-info .row .col {
+            margin: 20px auto;
+        }
+    footer {
+        padding: 10px;
         width: 100%;
         display: block;
     }
-    footer .logo-area{
-        width:100%;
-        padding:10px;
-    }
-    footer .company-detail{
+
+    footer .logo-area {
+        width: 100%;
         padding: 10px;
-        margin-left:14px;
+    }
+
+    footer .company-detail {
+        padding: 10px;
+        margin-left: 14px;
         width: 100%;
         text-align: left;
     }
+
     footer p {
         margin-left: -40px;
     }
-    .bottom {
-                position: relative;
 
-                    top: 10px;
-                    left: 10px;
-                    width:100px;
+    .bottom {
+        position: relative;
+
+        top: 10px;
+        left: 10px;
+        width: 100px;
     }
+
 }
 /*-Animations-*/
-img{
+.col img {
     transition: transform 0.3s ease;
 }
-img:hover{
+
+.col img:hover {
+    transform: scale(1.05);
+}
+
+.ctn:hover {
+    background-color: #0583D2;
+    color: whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 84, 0.5);
+    transition: all 0.3s;
+}
+
+li:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 84, 0.5);
+    transition: all 0.3s;
     transform: scale(1.1);
 }
-.ctn:hover{
-    background-color: whitesmoke;
-    color:#0583D2;
-    box-shadow: 0 0 5px rgba(0, 0, 84, 0.5);
-}
 
-li:hover{
-    color:#0583D2;
+.round:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
     cursor: pointer;
 }
 
-a:hover {
-    color: #0583D2;
-    cursor: pointer;
+.active:hover{
+        box-shadow: none;
+            transition: none;
+            transform: none;
+            cursor:default;
 }
