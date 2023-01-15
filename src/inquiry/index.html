@@ -22,11 +22,11 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="http://knjuryu.co.kr">Home</a></li>
-            <li><a href="http://knjuryu.co.kr/src/about/">회사소개</a></li>
-            <li ><a href="http://knjuryu.co.kr/src/catalog/"></a>주류안내</li>
-            <li><a href="#" onclick="alert('준비중입니다');return true;">도매몰</a></li>
-            <li class="active"><a href="http://knjuryu.co.kr/src/inquiry/"></a>문의하기</li>
+            <li onclick="location.href='../../'">Home</li>
+            <li onclick="location.href='../about/'">회사소개</li>
+            <li onclick="location.href='../catalog/'">주류안내</li>
+            <li onclick="alert('준비중입니다');return true;">도매몰</li>
+            <li class="active" onclick="location.href='/'">문의하기</li>
         </ul>
         <div class="menu-btn">
             <img src="../../img/menu_black_36dp.svg">
@@ -36,8 +36,7 @@
     <!-- Events  -->
     <section class="inquiry">
         <div class="title">
-            <h1>문의하기</h1>
-            <div class="line"></div>
+            <h1> </h1>
         </div>
         <div class="row">
             <div class="col">
@@ -80,7 +79,7 @@
                         <textarea id="inquiry" name="inquiry" rows="10" placeholder="내용을 입력하세요"></textarea>     
                         <div class="form-line">
                         <a href="#" class="submit-button">
-                        <input type="submit" value="문의전송하기" id="submitBtn"/>
+                        <button type="submit" id="submitBtn">문의전송하기</button>
                     </a>
                         </div>
                     <div style="display:none" class="thankyou_message">
@@ -129,6 +128,7 @@
         })
 
     </script>
+    
     <script data-cfasync="false" type="text/javascript"
         src="form-submission-handler.js"></script>
 

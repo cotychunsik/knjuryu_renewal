@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -22,11 +22,11 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="http://knjuryu.co.kr">Home</a></li>
-            <li class="active"><a href="http://knjuryu.co.kr/src/about/"></a>회사소개</li>
-            <li ><a href="http://knjuryu.co.kr/src/catalog/">주류안내</a></li>
-            <li><a href="#" onclick="alert('준비중입니다');return true;">도매몰</a></li>
-            <li class="ctn"><a href="http://knjuryu.co.kr/src/inquiry/">문의하기</a></li>
+            <li onclick="location.href='../../'">Home</li>
+            <li class="active" onclick="location.href='/'">회사소개</li>
+            <li onclick="location.href='../catalog/'">주류안내</li>
+            <li onclick="alert('준비중입니다');return true;">도매몰</li>
+            <li onclick="location.href='../inquiry'">문의하기</li>
         </ul>
         <div class="menu-btn">
             <img src="../../img/menu_black_36dp.svg">
@@ -62,9 +62,21 @@
                     <h4>오시는길</h4>
                     <a href="https://naver.me/xmPwcFh5">
                     <img src="http://kangnam1977.cdn1.cafe24.com/images/naver_map.png"></a>
-                    <p>주소: 서울특별시 서초구 탑성말길 17</p>
-                    <p>서초 엠코타운 근처 버스: 탑성마을 지하철:분당선 양재 꽃시장역</p>
-
+                    <div class="icon-wrap">
+                        <div class="icon place"></div>
+                        <div class="text">주소: 서울특별시 서초구 탑성말길 17</div>
+                    </div>
+                    
+                    <div class="icon-wrap">
+                        <div class="icon train">
+                        </div>
+                    
+                        <div class="text">지하철:신분당선 양재 시민의 숲 4번출구</div>
+                    </div>
+                    <div class="icon-wrap">
+                    <div class="icon bus"></div>
+                    <div class="text">버스: 탑성마을 정류장 하차</div>
+                    </div>
         </div>
     </section>
 

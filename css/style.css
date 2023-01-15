@@ -47,6 +47,39 @@ body, html{
     overflow-x: hidden;
 }
 
+/*-icons-*/
+.icon-wrap {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:10px;
+}
+.icon-wrap p {
+    margin-left:0px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    background-color: lightgray;
+    border-radius: 50%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom:8px;
+}
+
+.train {
+    background-image: url('../../img/train_black_24dp.svg');
+}
+
+.bus {
+    background-image: url('../../img/bus_black_24dp.svg');
+}
+.place{
+    background-image: url('../../img/place_black_24dp.svg');
+}
 /*-NavBar-*/
 
 .navbar{
@@ -303,6 +336,10 @@ p{
             margin-top: 50px;
         }
 /*-inquiry-*/
+.inquiry{
+    margin-top:180px;
+    height: 60vh;
+}
 .contact{
     text-align: left;
 }
@@ -520,6 +557,16 @@ footer p {
         left: 10px;
         width: 100px;
     }
+    /*-inquiry-*/
+        .inquiry {
+            margin-top: 40px;
+            height: 80vh;
+        }
+        
+    /*-icon-mobile-*/
+        .icon-wrap {
+            width: 80%;
+                    }
 
 }
 /*-Animations-*/
