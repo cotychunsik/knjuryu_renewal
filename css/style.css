@@ -335,8 +335,10 @@ p{
         .liquor-info .row .col {
             margin-top: 50px;
         }
+
+
 /*-inquiry-*/
-.inquiry{
+.message{
     margin-top:180px;
     height: 60vh;
 }
@@ -558,7 +560,7 @@ footer p {
         width: 100px;
     }
     /*-inquiry-*/
-        .inquiry {
+        .message {
             margin-top: 40px;
             height: 80vh;
         }

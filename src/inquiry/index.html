@@ -52,8 +52,8 @@
                 <div class="col">
                     <h4>이메일 문의</h4>
                     <p>연락받으실 이메일/전화번호 중 하나는 반드시 남겨주세요</p>
-                    <form class="gform" method="post" data-email="info@knjuryu.co.kr"
-                    action="https://script.google.com/macros/s/AKfycbwW2L95sw5qKlFCGDtUxiC-7YtfhZUqdTVrDyRtRca7AkfOn3hz19gnHZglHcBtTZusUA/exec">
+                    <form class="gform" method="post" data-email="info@knjuryu.co.kr" id="inquiry">
+<!-- action="https://script.google.com/macros/s/AKfycbwW2L95sw5qKlFCGDtUxiC-7YtfhZUqdTVrDyRtRca7AkfOn3hz19gnHZglHcBtTZusUA/exec" -->
                         <div class="form-line">
                             <div class="form-name">
                                 <label for="name">이름<span style="color: red;">*</span></label>
@@ -74,17 +74,17 @@
                             <input id="phone" name="phone" type="tel"/>
                         </div>
                         <div class="form-line">
-                            <label for="inquiry" type="text">문의내용</label>            
+                            <label for="message" type="text">문의내용</label>            
                         </div>
-                        <textarea id="inquiry" name="inquiry" rows="10" placeholder="내용을 입력하세요"></textarea>     
+                        <textarea id="message" name="message" rows="10" placeholder="내용을 입력하세요"></textarea>     
                         <div class="form-line">
                         <a href="#" class="submit-button">
                         <button type="submit" id="submitBtn">문의전송하기</button>
                     </a>
                         </div>
-                    <div style="display:none" class="thankyou_message">
+                    <!-- <div style="display:none" class="thankyou_message">
                         <p>문의전송완료</p>
-                    </div>
+                    </div> -->
                     </form>
                     
 
@@ -128,9 +128,33 @@
         })
 
     </script>
-    
-    <script data-cfasync="false" type="text/javascript"
-        src="form-submission-handler.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('tSuFZ8t7XCSInlSXk');
+            })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('inquiry').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                emailjs.sendForm('service_fy3awyk', 'info_knjuryu','#inquiry')
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        alert('고객님의 문의가 정상적으로 접수되었습니다. \n 빠른 시일내에 답변드릴 수 있도록 노력하겠습니다. ');
+                    }, 
+
+                        function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <!-- <script data-cfasync="false" type="text/javascript"
+        src="form-submission-handler.js"></script> -->
 
 </body>
 
