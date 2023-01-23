@@ -44,7 +44,8 @@ li{
 }
 
 body, html{
-    overflow-x: hidden;
+    width:100%;
+    overflow-x: hidden !important;
 }
 
 /*-icons-*/
@@ -128,7 +129,6 @@ header{
     align-items: center;
     justify-content: center;
     text-shadow: 0 0 20px rgba(0, 0, 84, 0.5);
-        overflow-x: hidden;
 }
 .header-content{
     margin-bottom: 150px;
@@ -180,7 +180,6 @@ header{
 section{
     width:80%;
     margin: 80px auto;
-        overflow-x: hidden;
 
 }
 .title{
@@ -432,9 +431,14 @@ footer p {
 
 /*-Mobile device-*/
 @media only screen and (max-width:850px) {
+    header{
+        max-width: 100vw;
+    }
     .navbar {
         padding: 0;
         position: absolute;
+        width:100%;
+        overflow-x: hidden;
     }
 
     .logo-area {
@@ -452,11 +456,11 @@ footer p {
 
     .nav-links {
         flex-direction: column;
-        width: 100%;
-        height: 80vh;
+        width: 70%;
+        height: 100vh;
         justify-content: center;
-        background-color: #16558f;
-        margin-top: -100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-right:-100vw;
         transition: all 0.5s ease;
     }
 
@@ -469,8 +473,7 @@ footer p {
 
 
     .mobile-menu {
-        margin-top: 0;
-        border-radius: 0 0 35% 0;
+        margin-right: 0;
     }
 
     .nav-links li {
@@ -489,6 +492,10 @@ footer p {
 
     .col img {
         max-width: 90%;
+    }
+
+    #about-title{
+        font-size: 5vmin;
     }
 
     /*-explore-*/
@@ -538,6 +545,8 @@ footer p {
 
     .round h4{
         font-size: 7vmin;
+        word-break: keep-all;
+        justify-content: center;
     }
     footer {
         padding: 10px;
@@ -572,6 +581,12 @@ footer p {
         .message {
             margin-top: 40px;
             height: 80vh;
+            width:100%;
+        }
+
+        form input{
+            width:150px;
+            
         }
         
     /*-icon-mobile-*/
