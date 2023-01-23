@@ -32,11 +32,13 @@
         
     </nav>
     <header>
+        <div class="bg-div">
         <div class="header-content">
             <h2>고객과 함께하는 주류유통</h2>
             <div class="line"></div>
             <h1>강남양행</h1>
-            <a href="./src/about/#" class="ctn">회사소개 더보기</a>
+            <a onclick="location.href='./src/about/'" class="ctn" >회사소개 더보기</a>
+        </div>
         </div>
     </header>
 
@@ -115,9 +117,11 @@
 <script type="text/javascript">        
         const menuBtn = document.querySelector('.menu-btn')
         const navlinks = document.querySelector('.nav-links')
+        const navBar = document.querySelector('.navbar')
 
         menuBtn.addEventListener('click', ()=>{
             navlinks.classList.toggle('mobile-menu')
+            navBar.classList.toggle('nav100')
         })
 
     </script>

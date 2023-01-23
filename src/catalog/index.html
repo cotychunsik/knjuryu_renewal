@@ -83,16 +83,17 @@
     
     </footer>
 
+<script type="text/javascript">
+    const menuBtn = document.querySelector('.menu-btn')
+    const navlinks = document.querySelector('.nav-links')
+    const navBar = document.querySelector('.navbar')
 
-    <script type="text/javascript">
-        const menuBtn = document.querySelector('.menu-btn')
-        const navlinks = document.querySelector('.nav-links')
+    menuBtn.addEventListener('click', () => {
+        navlinks.classList.toggle('mobile-menu')
+        navBar.classList.toggle('nav100')
+    })
 
-        menuBtn.addEventListener('click', () => {
-            navlinks.classList.toggle('mobile-menu')
-        })
-
-    </script>
+</script>
 </body>
 
 </html>

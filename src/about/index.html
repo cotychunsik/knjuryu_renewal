@@ -34,7 +34,7 @@
 
     </nav>
     <header class="about">
-        <div class="header-content">
+        <div class="header-content about-header">
             <h1>회사소개</h1>
             <div class="line"></div>
         </div>
@@ -103,16 +103,17 @@
     
     </footer>
 
+<script type="text/javascript">
+    const menuBtn = document.querySelector('.menu-btn')
+    const navlinks = document.querySelector('.nav-links')
+    const navBar = document.querySelector('.navbar')
 
-    <script type="text/javascript">
-        const menuBtn = document.querySelector('.menu-btn')
-        const navlinks = document.querySelector('.nav-links')
+    menuBtn.addEventListener('click', () => {
+        navlinks.classList.toggle('mobile-menu')
+        navBar.classList.toggle('nav100')
+    })
 
-        menuBtn.addEventListener('click', () => {
-            navlinks.classList.toggle('mobile-menu')
-        })
-
-    </script>
+</script>
 </body>
 
 </html>
