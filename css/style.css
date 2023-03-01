@@ -540,6 +540,7 @@ footer p {
     .content-col {
         width:80%;
         line-height: 1.5;
+        text-align: center;
     }
     .content-col h1 {
 
